@@ -36,6 +36,10 @@ func main() {
 	if err := cmd.Start(); err != nil {
 		log.Fatal("Run", "%v", err)
 	}
+	go func() {
+		cmd.Wait()
+		os.Exit(0)
+	}()
 FOR:
 	for {
 		select {
