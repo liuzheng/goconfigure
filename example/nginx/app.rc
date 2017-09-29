@@ -2,3 +2,14 @@ NGINX_VERSION=1.12.1
 NGINX_DIST=nginx-${NGINX_VERSION}.tar.gz
 NGINX_DOWNLOAD_LINK=https://nginx.org/download/${NGINX_DIST}
 NGINX_FOLDER=nginx-${NGINX_VERSION}
+
+
+OpenSSL_DIST=openssl-1.1.0f.tar.gz
+OpenSSL_URL=https://www.openssl.org/source/${OpenSSL_DIST}
+OpenSSL_FOLDER=openssl-1.1.0f
+
+PCRE_DIST=pcre-8.41.tar.gz
+PCRE_URL=ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${PCRE_DIST}
+
+zlib_DIST=zlib-1.2.11.tar.gz
+zlib_URL=https://zlib.net/${zlib_DIST}

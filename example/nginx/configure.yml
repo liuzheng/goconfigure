@@ -120,18 +120,18 @@ configure:
 #  --with-cpu-opt: CPU                 # build for the specified CPU, valid values: pentium, pentiumpro, pentium3, pentium4, athlon, opteron, sparc32, sparc64, ppc64
 #
 #  --without-pcre:                     # disable PCRE library usage
-#  --with-pcre:                        # force PCRE library usage
-#  --with-pcre: DIR                    # set path to PCRE library sources
+  --with-pcre:                        # force PCRE library usage
+  --with-pcre: ../pcre-8.41                   # set path to PCRE library sources
 #  --with-pcre-opt: OPTIONS            # set additional build options for PCRE
 #  --with-pcre-jit:                    # build PCRE with JIT compilation support
 #
-#  --with-zlib: DIR                    # set path to zlib library sources
+  --with-zlib: ../zlib-1.2.11                   # set path to zlib library sources
 #  --with-zlib-opt: OPTIONS            # set additional build options for zlib
 #  --with-zlib-asm: CPU                # use zlib assembler sources optimized for the specified CPU, valid values:  pentium, pentiumpro
 #  --with-libatomic:                   # force libatomic_ops library usage
 #  --with-libatomic: DIR               # set path to libatomic_ops library sources
 #
-#  --with-openssl: DIR                 # set path to OpenSSL library sources
+  --with-openssl: ../openssl-1.1.0f              # set path to OpenSSL library sources
 #  --with-openssl-opt: OPTIONS         # set additional build options for OpenSSL
 #
 #  --with-debug:                       # enable debug logging
