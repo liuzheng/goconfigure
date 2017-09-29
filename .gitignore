@@ -17,3 +17,4 @@ vendor/
 goconfigure
 .idea/
 dist/
+.DS_Store
