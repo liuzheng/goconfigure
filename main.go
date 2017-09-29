@@ -6,6 +6,7 @@ import (
 	"os/exec"
 	log "github.com/liuzheng712/golog"
 	"os"
+	"strings"
 	"syscall"
 	"os/signal"
 )
@@ -22,7 +23,7 @@ func main() {
 		}
 	}
 	cmd := exec.Command("./configure", Commands...)
-	fmt.Println(cmd.Args[0])
+	fmt.Println(strings.Join(cmd.Args, " "))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.SysProcAttr = &syscall.SysProcAttr{
