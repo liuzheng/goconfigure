@@ -5,7 +5,7 @@ VERSION_INCODE = $(shell perl -ne '/^var version.*"([^"]+)".*$$/ && print "v$$1\
 VERSION_INCHANGELOG = $(shell perl -ne '/^\# Release (\d+(\.\d+)+) / && print "$$1\n"' CHANGELOG.md | head -n1)
 
 build:
-	${GO} build -o glide -ldflags "-X main.version=${VERSION}"
+	${GO} build -o goconfigure -ldflags "-X main.version=${VERSION}"
 
 install: build
 	install -d ${DESTDIR}/usr/local/bin/

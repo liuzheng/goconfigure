@@ -19,7 +19,15 @@ func main() {
 		if v == "" || v == nil {
 			Commands = append(Commands, k)
 		} else {
-			Commands = append(Commands, fmt.Sprintf("%v=%v", k, v))
+			if _, ok := v.(string); ok {
+				Commands = append(Commands, fmt.Sprintf("%v=%v", k, v))
+			} else if list, ok := v.([]interface{}); ok {
+				for _, l := range list {
+					Commands = append(Commands, fmt.Sprintf("%v=%v", k, l))
+				}
+			} else {
+				log.Error("Feaure", "Sorry, didn't support that: %v,%v", k, v)
+			}
 		}
 	}
 	cmd := exec.Command("./configure", Commands...)
@@ -40,7 +48,7 @@ func main() {
 		cmd.Wait()
 		os.Exit(0)
 	}()
-FOR:
+	FOR:
 	for {
 		select {
 		case <-signals:
