@@ -26,9 +26,9 @@ func main() {
 	fmt.Println(strings.Join(cmd.Args, " "))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	cmd.SysProcAttr = &syscall.SysProcAttr{
-		Setpgid: true,
-	}
+	//cmd.SysProcAttr = &syscall.SysProcAttr{
+	//	Setpgid: true,
+	//}
 
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, syscall.SIGINT, syscall.SIGTERM)
