@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"os/exec"
 	log "github.com/liuzheng712/golog"
+	"os"
+	"syscall"
+	"os/signal"
 )
 
 func main() {
@@ -19,7 +22,27 @@ func main() {
 		}
 	}
 	cmd := exec.Command("./configure", Commands...)
+	fmt.Println(cmd.Args[0])
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.SysProcAttr = &syscall.SysProcAttr{
+		Setpgid: true,
+	}
+
+	signals := make(chan os.Signal, 1)
+	signal.Notify(signals, syscall.SIGINT, syscall.SIGTERM)
+
 	if err := cmd.Start(); err != nil {
 		log.Fatal("Run", "%v", err)
+	}
+FOR:
+	for {
+		select {
+		case <-signals:
+			pro, _ := os.FindProcess(cmd.Process.Pid)
+			pro.Kill()
+			os.Exit(0)
+			break FOR
+		}
 	}
 }
