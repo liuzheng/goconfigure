@@ -2,14 +2,14 @@ configure:
   --prefix: /usr/local/nginx        # set installation prefix
   --sbin-path: /usr/sbin/nginx     # set nginx binary pathname
 #  --modules-path: PATH               # set modules path
-#  --conf-path: PATH                  # set nginx.conf pathname
+  --conf-path: /etc/nginx/nginx.conf                  # set nginx.conf pathname
   --error-log-path: /var/log/nginx/error.log             # set error log pathname
   --pid-path: /var/run/nginx.pid                   # set nginx.pid pathname
   --lock-path: /var/lock/nginx.lock                  # set nginx.lock pathname
   --user: nginx                       # set non-privileged user for worker processes
   --group: nginx                     # set non-privileged group for worker processes
   --build: nginx                      # set build name
-#  --builddir: DIR                    # set build directory
+  --builddir: dist                    # set build directory
 #  --with-select_module:              # enable select module
 #  --without-select_module:           # disable select module
 #  --with-poll_module:                # enable poll module

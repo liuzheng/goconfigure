@@ -18,3 +18,5 @@ goconfigure
 .idea/
 dist/
 .DS_Store
+*.tar.gz
+example/*/*/

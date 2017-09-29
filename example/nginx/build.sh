@@ -14,4 +14,6 @@ fi
 
 tar xzf ${NGINX_DIST}
 cd ${NGINX_FOLDER}
+goconfigure -c configure.yml
 
+make
