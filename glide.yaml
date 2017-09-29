@@ -1,0 +1,4 @@
+package: github.com/liuzheng712/goconfigure
+import:
+- package: github.com/liuzheng712/golog
+- package: gopkg.in/yaml.v2
