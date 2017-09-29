@@ -16,7 +16,7 @@ func main() {
 	LoadConfig()
 	Commands := []string{}
 	for k, v := range Config.Configure {
-		if v == "" {
+		if v == "" || v == nil {
 			Commands = append(Commands, k)
 		} else {
 			Commands = append(Commands, fmt.Sprintf("%v=%v", k, v))
