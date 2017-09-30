@@ -123,7 +123,7 @@ configure:
   --with-pcre:                        # force PCRE library usage
   --with-pcre: ../pcre-8.41                   # set path to PCRE library sources
 #  --with-pcre-opt: OPTIONS            # set additional build options for PCRE
-#  --with-pcre-jit:                    # build PCRE with JIT compilation support
+  --with-pcre-jit:                    # build PCRE with JIT compilation support
 #
   --with-zlib: ../zlib-1.2.11                   # set path to zlib library sources
 #  --with-zlib-opt: OPTIONS            # set additional build options for zlib
@@ -135,3 +135,6 @@ configure:
 #  --with-openssl-opt: OPTIONS         # set additional build options for OpenSSL
 #
 #  --with-debug:                       # enable debug logging
+
+  --add-module:
+  - ../redis2-nginx-module-0.14

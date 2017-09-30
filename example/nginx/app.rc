@@ -13,3 +13,6 @@ PCRE_URL=ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${PCRE_DIST}
 
 zlib_DIST=zlib-1.2.11.tar.gz
 zlib_URL=https://zlib.net/${zlib_DIST}
+
+redis2_nginx_module_DIST=v0.14.tar.gz
+redis2_nginx_module_URL=https://github.com/openresty/redis2-nginx-module/archive/${redis2_nginx_module_DIST}

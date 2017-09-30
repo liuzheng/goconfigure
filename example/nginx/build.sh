@@ -32,6 +32,13 @@ if [ ! -f ${zlib_DIST} ]; then
 fi
 tar xzf ${zlib_DIST}
 
+# redis2-nginx-module
+if [ ! -f ${redis2_nginx_module_DIST} ]; then
+  curl -LO ${redis2_nginx_module_URL}
+fi
+tar xzf ${redis2_nginx_module_DIST}
+
+#
 
 cd ${NGINX_FOLDER}
 goconfigure -c ../configure.yml
