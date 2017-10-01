@@ -38,7 +38,27 @@ if [ ! -f ${redis2_nginx_module_DIST} ]; then
 fi
 tar xzf ${redis2_nginx_module_DIST}
 
-#
+# ngx_devel_kit
+if [ ! -f ${ngx_devel_kit_DIST} ]; then
+  curl -LO ${ngx_devel_kit_URL}
+fi
+tar xzf ${ngx_devel_kit_DIST}
+
+# lua_nginx_module
+if [ ! -f ${lua_nginx_module_DIST} ]; then
+  curl -LO ${lua_nginx_module_URL}
+fi
+tar xzf ${lua_nginx_module_DIST}
+
+# LuaJIT
+if [ ! -f ${LuaJIT_DIST} ]; then
+  curl -LO ${LuaJIT_URL}
+fi
+tar xzf ${LuaJIT_DIST}
+
+cd LuaJIT-${LuaJIT_VERSION}
+sudo make install
+cd -
 
 cd ${NGINX_FOLDER}
 goconfigure -c ../configure.yml

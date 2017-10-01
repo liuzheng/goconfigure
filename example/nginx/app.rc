@@ -16,3 +16,19 @@ zlib_URL=https://zlib.net/${zlib_DIST}
 
 redis2_nginx_module_DIST=v0.14.tar.gz
 redis2_nginx_module_URL=https://github.com/openresty/redis2-nginx-module/archive/${redis2_nginx_module_DIST}
+
+ngx_devel_kit_DIST=v0.3.0.tar.gz
+ngx_devel_kit_URL=https://github.com/simpl/ngx_devel_kit/archive/${ngx_devel_kit_DIST}
+
+
+lua_nginx_module_DIST=v0.10.11rc2.tar.gz
+lua_nginx_module_URL=https://github.com/openresty/lua-nginx-module/archive/${lua_nginx_module_DIST}
+
+LuaJIT_VERSION=2.0.5
+LUAJIT_MAJOR_VERSION=2.0
+LuaJIT_DIST=LuaJIT-${LuaJIT_VERSION}.tar.gz
+LuaJIT_URL=http://luajit.org/download/${LuaJIT_DIST}
+
+LUAJIT_LIB=/usr/local/lib/lua
+LUAJIT_INC=/usr/local/include/luajit-${LUAJIT_MAJOR_VERSION}
+
