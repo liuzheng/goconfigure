@@ -4,7 +4,7 @@ NGINX_DOWNLOAD_LINK=https://nginx.org/download/${NGINX_DIST}
 NGINX_FOLDER=nginx-${NGINX_VERSION}
 
 
-OpenSSL_DIST=openssl-1.1.0f.tar.gz
+OpenSSL_DIST=openssl-1.0.2l.tar.gz
 OpenSSL_URL=https://www.openssl.org/source/${OpenSSL_DIST}
 OpenSSL_FOLDER=openssl-1.1.0f
 

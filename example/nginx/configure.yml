@@ -132,7 +132,7 @@ configure:
 #  --with-libatomic:                   # force libatomic_ops library usage
 #  --with-libatomic: DIR               # set path to libatomic_ops library sources
 #
-  --with-openssl: ../openssl-1.1.0f              # set path to OpenSSL library sources
+  --with-openssl: ../openssl-1.0.2l              # set path to OpenSSL library sources
 #  --with-openssl-opt: OPTIONS         # set additional build options for OpenSSL
 #
 #  --with-debug:                       # enable debug logging
